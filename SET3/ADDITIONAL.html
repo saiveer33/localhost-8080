@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Login Form</title>
+
+<style>
+body {
+    text-align: center;
+    background-color: lightblue;
+}
+input {
+    padding: 8px;
+    margin: 5px;
+}
+</style>
+
+<script>
+function validate() {
+    var u = document.getElementById("user").value;
+    var p = document.getElementById("pass").value;
+
+    if (u == "" || p == "") {
+        alert("Please fill all fields");
+        return false;
+    }
+
+    if (p.length < 8) {
+        alert("Password must be 8 characters");
+        return false;
+    }
+
+    alert("Login Successful");
+    return false;
+}
+</script>
+</head>
+
+<body>
+<h2>Login Form</h2>
+
+<form onsubmit="return validate()">
+    Username: <input type="text" id="user"><br><br>
+    Password: <input type="password" id="pass"><br><br>
+    <input type="submit" value="Login">
+</form>
+
+</body>
+</html>
+
+
+
+
